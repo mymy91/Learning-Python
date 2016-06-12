@@ -1,5 +1,5 @@
 # This is my first function called name. It will ask the name and
-# print a message.
+# print a message
 
 def SeperateLession():
 	print('--END--')
@@ -32,7 +32,7 @@ def addition_Integer():
 	secondNumber = int(input('Input the secondNumber:'))
 	print(firstNumber + secondNumber)
 	
-addition_Integer()
+#addition_Integer()
 SeperateLession()
 
 #Lession 4
@@ -42,6 +42,61 @@ def addition_Float():
 	secondNumber = float(input('Input the secondNumber:'))
 	print(firstNumber + secondNumber)
 
-addition_Float()
-SeperateLession()	
+#addition_Float()
+SeperateLession()
+
+#Lession 5
+print('--Lession 5--')
+def subtraction_Int():
+	firstNumber = int(input('Input the firstNumber:'))
+	secondNumber = int(input('Input the secondNumber:'))
+	print('Result: ' + str(firstNumber - secondNumber))
+
+#subtraction_Int()
+SeperateLession()		
+
+def mutiply_Int():
+	firstNumber = int(input('Input the firstNumber:'))
+	secondNumber = int(input('Input the secondNumber:'))
+	print('Result: ' + str(firstNumber * secondNumber))
+
+def divide_Int():
+	firstNumber = int(input('Input the firstNumber:'))
+	secondNumber = int(input('Input the secondNumber:'))
+	print('Result: ' + str(firstNumber / secondNumber))
+	
+#Lession 6
+print('--Lession 6--')
+def modulo():
+	firstNumber = int(input('Input the firstNumber:'))
+	secondNumber = int(input('Input the secondNumber:'))
+	print('Result: ' + str(firstNumber % secondNumber))
+
+#modulo()
+SeperateLession()
+
+def quit():
+	global _calcOn
+	_calcOn = 0
+	
+def CalcRun():
+	op = input('1,2,3, 4 or 5?')
+	if op == '1':
+		addition_Integer()
+	elif op == '2':
+		subtraction_Int()
+	elif op == '3':
+		mutiply_Int()
+	elif op == '4':
+		divide_Int()
+	elif op == '5':
+		modulo()
+	else:
+		quit()
+		
+_calcOn = 1
+
+while _calcOn == 1:
+	CalcRun()
+
 	
